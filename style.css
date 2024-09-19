@@ -7,12 +7,24 @@ body {
 #home {
   background-color: rgb(58, 65, 73);
   padding-bottom: 1cm;
-  margin-left:-1cm;
-  margin-right:-1cm;
+  margin-left: -3cm;
   margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
   height: 5mm;
+  width: 100%;
+  position: sticky;
+  top: 0;
+ }
+
+ nav.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 10px 8%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
  }
 
 .topmenu {
@@ -41,7 +53,6 @@ body {
   float: left;
   padding-left: 2cm;
   font-size: 30px;
-  /* Add the styles here */
 }
 
 .profile_name .contact_info {

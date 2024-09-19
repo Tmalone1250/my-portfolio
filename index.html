@@ -7,7 +7,7 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav>
+    <nav id="navbar" class="sticky">
       <div id="home">
         <div class="profile_name">
           Trevor Malone
@@ -24,7 +24,6 @@
         </div>
         <div class="topdiv">
           <a class="topmenu" href="#about-me">About Me</a>
-          <!-- Add the links for Skills, Projects and Recommendation here -->
           <a class="topmenu" href="#skills">Skills</a>
           <a class="topmenu" href="#projects">Projects</a>
           <a class="topmenu" href="#recommendations">Recommendations</a>
@@ -85,10 +84,6 @@
           <h6>Python</h6>
           <p>.5 year experience</p>
         </div>
-
-        <!-- Add more skills here -->
-
-
       </div>
     </section>
           
@@ -161,6 +156,7 @@
       </div>
     </section>
 
+    <!-- Home Icon -->
     <div class="iconbutton">
       <a href="#home">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
@@ -169,10 +165,23 @@
       </a>
     </div>
 
+    <!-- Recommendation Alert -->
     <div class="popup" id="popup" class="flex_center">
       <img src="html_finalprojimages/checkmark--outline.svg"/>
       <h3>Thank you for leaving a recommendation!</h3>
       <button onclick="showPopup(true)">Ok</button>
     </div>
+    <script>
+      var navbar = document.getElementById("navbar");
+
+      window.onscroll = function(){
+        if(window.pageYOffset >= menu.offsetTop){
+          navbar.classList.add("sticky");
+        }
+        else{
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 </html>
